@@ -1,17 +1,15 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { firebase } from "../firebase";
 
 // Context
 import { useProjectValue, useProjectsValue } from "../context";
 
-// Helpers
-import { generatePushId } from "../helpers";
-
 export const AddProject = ({ shouldShow = false }) => {
   const [show, setShow] = useState(shouldShow);
   const [projectName, setProjectName] = useState("");
 
-  const projectId = generatePushId();
+  const projectId = uuidv4();
   const { setProjects } = useProjectsValue();
 
   const addProject = () => {
