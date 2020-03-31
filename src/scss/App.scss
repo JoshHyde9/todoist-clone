@@ -365,12 +365,12 @@ header {
 
       .checkbox {
         cursor: pointer;
-        border-color: grey;
+        border-color: #808080;
         color: #343434;
         height: 16px;
         width: 16px;
         display: block;
-        border: 1px solid grey;
+        border: 1px solid #808080;
         border-radius: 16px;
       }
     }
@@ -407,6 +407,119 @@ header {
 }
 
 // Add Task
+.add-task {
+  &__overlay {
+    background-color: rgba(102, 102, 102, 0.15);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    transition: opacity 0.2s ease-in;
+    height: calc(100vh);
+
+    .add-task__main {
+      overflow: visible;
+      margin-bottom: 20px;
+      margin-top: 55px;
+      border-radius: 5px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      padding: 20px 30px;
+      transform: translate(-50%, -50%);
+
+      .header {
+        font-size: 13px;
+        margin-bottom: 20px;
+        float: left;
+      }
+    }
+
+    .add-task__cancel-x {
+      cursor: pointer;
+      color: #808080;
+      float: right;
+      font-weight: bold;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__project,
+  &__date {
+    cursor: pointer;
+    float: right;
+    color: #808080;
+    margin: 20px 10px;
+  }
+
+  &__project {
+    margin-right: 0;
+  }
+
+  &__content {
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fff !important;
+    border-radius: 3px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__cancel {
+    @include cancel();
+  }
+
+  &__submit {
+    @include btn("90px");
+  }
+}
+
+.add-task__shallow,
+.add-project {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+// Task Date
+.task-date {
+  @include box-overlay();
+  background-color: #fff;
+  width: 200px;
+  right: 0;
+
+  &__list li {
+    @include task-item();
+
+    span:first-of-type {
+      margin-right: 10px;
+
+      svg {
+        fill: #808080;
+      }
+    }
+  }
+}
+
+// Project Overlay
+.project-overlay {
+  @include box-overlay();
+  background-color: #fff;
+
+  &__list li {
+    @include task-item();
+  }
+}
+
 .add-task__plus,
 .add-project__plus {
   cursor: pointer;
