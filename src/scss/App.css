@@ -472,6 +472,22 @@ header nav div.settings ul li.settings__darkmode button svg {
   margin: 2px 5px;
 }
 
+.add-task__plus,
+.add-project__plus {
+  cursor: pointer;
+  color: #dd4b39;
+  font-size: 18px;
+}
+
+.add-task__text,
+.add-project__text {
+  cursor: pointer;
+  display: inline-block;
+  color: #545454;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
 .darkmode header {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);

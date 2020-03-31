@@ -406,6 +406,23 @@ header {
   }
 }
 
+// Add Task
+.add-task__plus,
+.add-project__plus {
+  cursor: pointer;
+  color: #dd4b39;
+  font-size: 18px;
+}
+
+.add-task__text,
+.add-project__text {
+  cursor: pointer;
+  display: inline-block;
+  color: #545454;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
 // Utility
 .darkmode {
   header {
