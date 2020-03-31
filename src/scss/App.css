@@ -425,6 +425,53 @@ header nav div.settings ul li.settings__darkmode button svg {
   border-radius: 16px;
 }
 
+.add-project {
+  padding-left: 13px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.add-project__input {
+  margin-bottom: 20px;
+}
+
+.add-project__name {
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #fff !important;
+  border-radius: 3px;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-project__submit {
+  width: "100px";
+  background-color: #db4c3f;
+  color: #fff !important;
+  border: 1px solid transparent;
+  margin-right: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 13px !important;
+  line-height: 17px;
+  padding: 6px 12px 7px 12px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px !important;
+  text-decoration: none !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-project__cancel {
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 2px 5px;
+}
+
 .darkmode header {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
