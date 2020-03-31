@@ -2,11 +2,13 @@ import React from "react";
 
 // Components
 import { Sidebar } from "./Sidebar";
+import { Tasks } from "../Tasks";
 
 export const Content = () => {
   return (
-    <section>
+    <section className="content">
       <Sidebar />
+      <Tasks />
     </section>
   );
 };
