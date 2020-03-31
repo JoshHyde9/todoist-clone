@@ -5,6 +5,9 @@ import { firebase } from "../firebase";
 // Context
 import { useSelectedProjectValue } from "../context";
 
+// Components
+import { ProjectOverlay } from "./ProjectOverlay";
+
 // Icons
 import { FaRegListAlt, FaRegCalendarAlt } from "react-icons/fa";
 
@@ -74,14 +77,14 @@ export const AddTask = ({
       )}
 
       {(showMain || showQuickAddTask) && (
-        <div className="add-task__main" data-testid="add-tak-main">
+        <div className="add-task__main" data-testid="add-task-main">
           {showQuickAddTask && (
             <>
               <div data-testid="quick-add-task">
                 <h2 className="header">Quick Add Task</h2>
                 <span
                   className="add-task__cancel-x"
-                  data-testid="add-task-cancel"
+                  data-testid="add-task-quick-cancel"
                   onClick={() => {
                     setShowMain(false);
                     setShowProjectOverlay(false);
@@ -93,7 +96,11 @@ export const AddTask = ({
               </div>
             </>
           )}
-          <p>Project overlay here</p>
+          <ProjectOverlay
+            setProject={setProject}
+            showProjectOverlay={showProjectOverlay}
+            setShowProjectOverlay={setShowProjectOverlay}
+          />
           <p>TaskDate here</p>
           <input
             className="add-task__content"
@@ -125,7 +132,7 @@ export const AddTask = ({
           <span
             className="add-task__project"
             data-testid="show-project-overlay"
-            onClick={() => setShowProjectOverlay(!setShowProjectOverlay)}
+            onClick={() => setShowProjectOverlay(!showProjectOverlay)}
           >
             <FaRegListAlt />
           </span>
