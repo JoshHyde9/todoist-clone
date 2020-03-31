@@ -12,9 +12,23 @@ export const Header = () => {
         </div>
         <div className="settings">
           <ul>
-            <li>+</li>
-            <li>
-              <FaPizzaSlice />
+            <li className="settings__add">
+              <button
+                data-testid="quick-add-task-action"
+                aria-label="Quick add task"
+                type="button"
+              >
+                +
+              </button>
+            </li>
+            <li className="settings__darkmode">
+              <button
+                data-testid="dark-mode-action"
+                aria-label="Darkmode on/off"
+                type="button"
+              >
+                <FaPizzaSlice />
+              </button>
             </li>
           </ul>
         </div>
